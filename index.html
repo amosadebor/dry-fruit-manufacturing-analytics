@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simulated dry-fruit manufacturing analytics case study by Amos Adebo.">
+  <title>Dry-Fruit Manufacturing Analytics | Amos Adebo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">AMOS ADEBO · MANUFACTURING & OPERATIONS ANALYTICS</div>
+      <h1>Dry-Fruit Manufacturing Operations Performance &amp; HSE Analytics</h1>
+      <p class="subtitle">Simulated Manufacturing Analytics Case Study</p>
+      <div class="disclosure"><strong>Portfolio disclosure:</strong> This case study uses synthetic data. Findings are illustrative and do not represent actual employer performance. Association is not treated as causation.</div>
+      <div class="cta-row">
+        <a class="button primary" href="https://github.com/amosadebor/dry-fruit-manufacturing-analytics" target="_blank" rel="noopener">View GitHub Repository</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/amos-adebo" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro">
+      <div class="container two-col">
+        <div>
+          <div class="section-label">THE BUSINESS QUESTION</div>
+          <h2>What operational factors appear to be associated with production underperformance, quality losses and HSE exposure?</h2>
+          <p>I approached the problem as an operational analytics exercise rather than beginning with a predefined chart. The workflow moved from data understanding and validation through KPI construction, segmented analysis, SQL reproduction, deeper relationship testing and management-oriented dashboarding.</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat"><strong>540</strong><span>synthetic records</span></div>
+          <div class="stat"><strong>3</strong><span>products</span></div>
+          <div class="stat"><strong>4</strong><span>machines</span></div>
+          <div class="stat"><strong>3</strong><span>shifts</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-label">ANALYTICAL APPROACH</div>
+        <h2>From operational question to management investigation priorities</h2>
+        <div class="steps">
+          <div><b>01</b><span>Understand &amp; validate data</span></div>
+          <div><b>02</b><span>Calculate core KPIs</span></div>
+          <div><b>03</b><span>Segment by machine, shift, product &amp; month</span></div>
+          <div><b>04</b><span>Reproduce analyses in SQL</span></div>
+          <div><b>05</b><span>Test deeper relationships &amp; interactions</span></div>
+          <div><b>06</b><span>Build dashboards &amp; communicate findings</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-label">KPI FRAMEWORK</div>
+        <div class="kpi-grid">
+          <div class="kpi"><h3>Production Attainment</h3><p>Actual Output / Target Output × 100</p></div>
+          <div class="kpi"><h3>Reject Rate</h3><p>Rejects / Actual Output × 100</p></div>
+          <div class="kpi"><h3>Downtime Rate</h3><p>Downtime Minutes / Scheduled Minutes × 100</p></div>
+          <div class="kpi"><h3>Net Good Output</h3><p>Actual Output − Rejects</p></div>
+        </div>
+        <p class="small-note">The workbook also contains an <strong>OEE-like</strong> illustrative metric; it is intentionally not presented as formal OEE.</p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-label">SELECTED SIMULATED FINDINGS</div>
+        <div class="finding-grid">
+          <article><span class="finding-number">01</span><h3>Downtime ↔ attainment</h3><p>Overall record-level correlation is approximately <strong>-0.663</strong>. The relationship remains present after segmentation by machine and shift.</p><p class="qualifier">Interpretation: higher downtime observations tend to coincide with lower attainment in this simulation; this does not prove causation.</p></article>
+          <article><span class="finding-number">02</span><h3>Dryer 3</h3><p>Dryer 3 records approximately <strong>8,668 downtime minutes</strong> and a <strong>13.41% downtime rate</strong>, the highest simulated machine-level burden.</p></article>
+          <article><span class="finding-number">03</span><h3>Shift C</h3><p>Shift C records approximately <strong>84.51% attainment</strong> and the highest shift-level downtime rate.</p></article>
+          <article><span class="finding-number">04</span><h3>Shift C × Dryer 3</h3><p>The strongest diagnostic combination records approximately <strong>80.47% attainment</strong>, <strong>15.38% downtime</strong> and <strong>4.51% reject rate</strong>.</p></article>
+          <article><span class="finding-number">05</span><h3>Dried Mango × Dryer 3</h3><p>This product-machine cohort has the highest simulated reject rate at approximately <strong>4.82%</strong>.</p></article>
+          <article><span class="finding-number">06</span><h3>Weak HSE relationships</h3><p>GMP/reject and PPE/safety-observation relationships are weak in the simulation, so they are retained as contextual indicators rather than causal drivers.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-label">DASHBOARD EVIDENCE</div>
+        <h2>Management-oriented views</h2>
+        <div class="dashboard-card"><h3>Executive</h3><img src="assets/dashboard_executive.png" alt="Executive manufacturing analytics dashboard"></div>
+        <div class="dashboard-card"><h3>Operations</h3><img src="assets/dashboard_operations.png" alt="Operations manufacturing analytics dashboard"></div>
+        <div class="dashboard-card"><h3>HSE</h3><img src="assets/dashboard_hse.png" alt="HSE manufacturing analytics dashboard"></div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container two-col">
+        <div>
+          <div class="section-label">MANAGEMENT INVESTIGATION PRIORITIES</div>
+          <h2>What the evidence suggests should be investigated next</h2>
+          <ol class="priority-list">
+            <li><strong>Diagnose Dryer 3 / Shift C:</strong> review event-level downtime, repeat stoppages and operating context.</li>
+            <li><strong>Improve downtime taxonomy:</strong> capture structured stop reasons, timestamps, loss categories and recurrence.</li>
+            <li><strong>Drill into Dried Mango × Dryer 3:</strong> add process conditions, defect categories and quality checkpoint data.</li>
+            <li><strong>Review Shift C operating context:</strong> validate handover, workload, escalation and action backlog.</li>
+            <li><strong>Improve HSE data granularity:</strong> add severity, exposure hours, action age, ownership and repeat-occurrence fields.</li>
+          </ol>
+        </div>
+        <div class="evidence-note">
+          <h3>Analytical discipline</h3>
+          <p>The recommendations are framed as <strong>investigations</strong>, not root-cause conclusions. Real operational decisions require validated production, maintenance, quality and HSE records.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-label">LIMITATIONS &amp; DISCLOSURE</div>
+        <div class="limit-grid">
+          <div><h3>Synthetic dataset</h3><p>The entire working dataset is simulated. Patterns are illustrative and do not represent actual employer performance.</p></div>
+          <div><h3>Association ≠ causation</h3><p>Observed relationships are not treated as proof that one factor caused another.</p></div>
+          <div><h3>Context gaps</h3><p>The data lacks enough process-context variables to establish actual root causes.</p></div>
+          <div><h3>Trend caution</h3><p>July contains only nine records and should be treated cautiously in trend interpretation.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-label">TECHNICAL EVIDENCE</div>
+        <h2>Inspect the work behind the story</h2>
+        <div class="links-grid">
+          <a href="https://github.com/amosadebor/dry-fruit-manufacturing-analytics/tree/main/02_SQL" target="_blank" rel="noopener"><strong>SQL analysis</strong><span>Machine, shift, product, HSE and deeper analysis queries.</span></a>
+          <a href="https://github.com/amosadebor/dry-fruit-manufacturing-analytics/blob/main/04_Dashboard/Simulated_Dry_Fruit_Analytics_Portfolio_Pack.xlsx" target="_blank" rel="noopener"><strong>Analytical workbook</strong><span>Portfolio pack containing calculations, evidence and dashboards.</span></a>
+          <a href="https://github.com/amosadebor/dry-fruit-manufacturing-analytics/blob/main/05_Case_Study/case-study.md" target="_blank" rel="noopener"><strong>Full case study</strong><span>Complete methodology, findings, recommendations and limitations.</span></a>
+          <a href="https://github.com/amosadebor" target="_blank" rel="noopener"><strong>GitHub profile</strong><span>Portfolio home and future analytics projects.</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Amos Adebo</span>
+      <span>Simulated analytics case study · Synthetic data</span>
+    </div>
+  </footer>
+</body>
+</html>
