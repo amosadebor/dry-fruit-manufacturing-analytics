@@ -61,54 +61,50 @@ The workbook also contains an **OEE-like** illustrative metric. It is intentiona
 
 ### Executive dashboard
 
-![Executive dashboard](docs/assets/dashboard_executive.png)
+![Executive dashboard](dashboard_executive.png)
 
 ### Operations dashboard
 
-![Operations dashboard](docs/assets/dashboard_operations.png)
+![Operations dashboard](dashboard_operations.png)
 
 ### HSE dashboard
 
-![HSE dashboard](docs/assets/dashboard_hse.png)
+![HSE dashboard](dashboard_hse.png)
 
 ## Repository structure
+
+This repository is intentionally kept **flat** to make public deployment easy from a phone.
 
 ```text
 dry-fruit-manufacturing-analytics/
 ├── README.md
-├── 01_Data/
-│   ├── README.md
-│   └── data_dictionary.md
-├── 02_SQL/
-│   ├── phase4_analysis.sql
-│   └── phase5_deeper_analysis.sql
-├── 03_Analysis/
-│   └── analysis_notes.md
-├── 04_Dashboard/
-│   └── Simulated_Dry_Fruit_Analytics_Portfolio_Pack.xlsx
-├── 05_Case_Study/
-│   └── case-study.md
-├── 06_Documentation/
-│   ├── limitations.md
-│   ├── quality_notes.md
-│   ├── project_completion_readout.md
-│   └── synthetic_data_disclosure.md
-└── docs/
-    ├── index.html
-    ├── style.css
-    └── assets/
-        ├── dashboard_executive.png
-        ├── dashboard_operations.png
-        └── dashboard_hse.png
+├── index.html
+├── style.css
+├── .nojekyll
+├── data_dictionary.md
+├── analysis_notes.md
+├── phase4_analysis.sql
+├── phase5_deeper_analysis.sql
+├── Simulated_Dry_Fruit_Analytics_Portfolio_Pack.xlsx
+├── dashboard_executive.png
+├── dashboard_operations.png
+├── dashboard_hse.png
+├── case-study.md
+├── limitations.md
+├── quality_notes.md
+├── synthetic_data_disclosure.md
+├── project_completion_readout.md
+├── LICENSE
+└── .gitignore
 ```
 
 ## Technical evidence
 
-**SQL:** [`02_SQL/`](02_SQL/)  
-**Analytical notes:** [`03_Analysis/analysis_notes.md`](03_Analysis/analysis_notes.md)  
-**Dashboard workbook:** [`04_Dashboard/Simulated_Dry_Fruit_Analytics_Portfolio_Pack.xlsx`](04_Dashboard/Simulated_Dry_Fruit_Analytics_Portfolio_Pack.xlsx)  
-**Full case study:** [`05_Case_Study/case-study.md`](05_Case_Study/case-study.md)  
-**Limitations:** [`06_Documentation/limitations.md`](06_Documentation/limitations.md)
+**SQL:** [`phase4_analysis.sql`](phase4_analysis.sql) and [`phase5_deeper_analysis.sql`](phase5_deeper_analysis.sql)  
+**Analytical notes:** [`analysis_notes.md`](analysis_notes.md)  
+**Dashboard workbook:** [`Simulated_Dry_Fruit_Analytics_Portfolio_Pack.xlsx`](Simulated_Dry_Fruit_Analytics_Portfolio_Pack.xlsx)  
+**Full case study:** [`case-study.md`](case-study.md)  
+**Limitations:** [`limitations.md`](limitations.md)
 
 ## What this project demonstrates
 
